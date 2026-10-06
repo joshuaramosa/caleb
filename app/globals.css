@@ -1,0 +1,207 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  /* Marca Pollería Don Caleb — Amarillo/Dorado Principal */
+  --color-caleb-50: #fefcf0;
+  --color-caleb-100: #fef8d6;
+  --color-caleb-200: #fdf0a8;
+  --color-caleb-300: #fbe570;
+  --color-caleb-400: #F0C000; /* Amarillo/dorado principal del logo */
+  --color-caleb-500: #F0B000; /* Amarillo dorado secundario */
+  --color-caleb-600: #d49800;
+  --color-caleb-700: #b07c00;
+  --color-caleb-800: #906400;
+  --color-caleb-900: #784f00;
+  --color-caleb-950: #442c00;
+
+  /* Marca Caleb — Naranja Pollería (CTA / Botones) */
+  --color-caleb-naranja-50: #fff6ed;
+  --color-caleb-naranja-100: #ffead4;
+  --color-caleb-naranja-200: #ffd0a8;
+  --color-caleb-naranja-300: #F0A000; /* Naranja del logo */
+  --color-caleb-naranja-400: #e08800;
+  --color-caleb-naranja-500: #C05000; /* Naranja intenso del logo */
+  --color-caleb-naranja-600: #a04000;
+  --color-caleb-naranja-700: #803000; /* Marrón oscuro del logo */
+  --color-caleb-naranja-800: #602400;
+  --color-caleb-naranja-900: #401800;
+
+  /* Marca Caleb — Marrón Oscuro / Carbón */
+  --color-caleb-dark-800: #2d1a0a;
+  --color-caleb-dark-900: #1a0f05;
+  --color-caleb-dark-950: #0d0803;
+
+  /* Estados de pedido */
+  --color-order-pendiente: #F0B000;
+  --color-order-confirmado: #3b82f6;
+  --color-order-preparando: #a855f7;
+  --color-order-listo: #22c55e;
+  --color-order-en-camino: #06b6d4;
+  --color-order-entregado: #16a34a;
+  --color-order-cancelado: #ef4444;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-display: var(--font-display);
+  --font-serif: var(--font-display);
+  --font-script: var(--font-script);
+  --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-display);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  --background: #fffdf7; /* Blanco cálido dorado */
+  --foreground: #1a0f05;
+  --card: #ffffff;
+  --card-foreground: #1a0f05;
+  --popover: #ffffff;
+  --popover-foreground: #1a0f05;
+  --primary: #C05000; /* Naranja intenso del logo — CTA principal */
+  --primary-foreground: #ffffff;
+  --secondary: #fef8e8;
+  --secondary-foreground: #803000;
+  --muted: #faf5ec;
+  --muted-foreground: #8a7a64;
+  --accent: #fef3c7; /* Acento dorado suave */
+  --accent-foreground: #803000;
+  --destructive: #dc2626;
+  --border: #f0e8d8;
+  --input: #ebe2d0;
+  --ring: #F0C000; /* Anillo de foco dorado Caleb */
+  --chart-1: #C05000;
+  --chart-2: #F0C000;
+  --chart-3: #10b981;
+  --chart-4: #6366f1;
+  --chart-5: #1a0f05;
+  --radius: 0.75rem;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #1a0f05;
+  --sidebar-primary: #C05000;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #fef8e8;
+  --sidebar-accent-foreground: #803000;
+  --sidebar-border: #f0e8d8;
+  --sidebar-ring: #F0C000;
+}
+
+.dark {
+  --background: #0d0803; /* Marrón oscuro profundo */
+  --foreground: #f8f5f0;
+  --card: #1a0f05;
+  --card-foreground: #f8f5f0;
+  --popover: #1a0f05;
+  --popover-foreground: #f8f5f0;
+  --primary: #F0A000;
+  --primary-foreground: #1a0f05;
+  --secondary: #2d1a0a;
+  --secondary-foreground: #f8f5f0;
+  --muted: #2d1a0a;
+  --muted-foreground: #a09080;
+  --accent: #3d2810;
+  --accent-foreground: #F0C000;
+  --destructive: #ef4444;
+  --border: rgba(240, 192, 0, 0.12);
+  --input: rgba(240, 192, 0, 0.15);
+  --ring: #F0C000;
+  --chart-1: #F0A000;
+  --chart-2: #F0C000;
+  --chart-3: #34d399;
+  --chart-4: #818cf8;
+  --chart-5: #f0e8d8;
+  --sidebar: #1a0f05;
+  --sidebar-foreground: #f8f5f0;
+  --sidebar-primary: #F0A000;
+  --sidebar-primary-foreground: #1a0f05;
+  --sidebar-accent: #2d1a0a;
+  --sidebar-accent-foreground: #F0C000;
+  --sidebar-border: rgba(240, 192, 0, 0.12);
+  --sidebar-ring: #F0C000;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground selection:bg-caleb-400/30 selection:text-caleb-950;
+  }
+  html {
+    @apply font-sans scroll-smooth;
+  }
+}
+
+/* Efectos visuales y utilidades tipográficas */
+.font-display {
+  font-family: var(--font-display), Georgia, serif;
+}
+
+.font-script {
+  font-family: var(--font-script), cursive;
+}
+
+.font-sans {
+  font-family: var(--font-sans), sans-serif;
+}
+
+.glow-caleb-gold {
+  box-shadow: 0 0 35px -5px rgba(240, 192, 0, 0.3);
+}
+
+.glow-caleb-naranja {
+  box-shadow: 0 0 35px -5px rgba(192, 80, 0, 0.3);
+}
+
+.glass-surface {
+  background: rgba(255, 253, 247, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(240, 192, 0, 0.15);
+}
+
+.dark .glass-surface {
+  background: rgba(26, 15, 5, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(240, 192, 0, 0.1);
+}
