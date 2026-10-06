@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/sonner";
 import { PwaRegister } from "@/components/pwa-register";
+import { Analytics } from "@vercel/analytics/next";
 
 const sansFont = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -66,6 +67,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         {children}
         <Toaster duration={1500} />
         <PwaRegister />
+        <Analytics />
       </body>
     </html>
   );
