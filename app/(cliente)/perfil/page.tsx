@@ -77,7 +77,7 @@ export default function PerfilPage() {
           <Label htmlFor="p-name" className="font-semibold text-[#141a26]">Nombre</Label>
           <Input
             id="p-name"
-            placeholder="Ej. Rosa Gutiérrez"
+            placeholder="Ej. Caleb"
             value={profile.name}
             onChange={set("name")}
             disabled={!editing}
@@ -92,7 +92,7 @@ export default function PerfilPage() {
           <Input
             id="p-phone"
             inputMode="numeric"
-            placeholder="9 dígitos, ej. 987654321"
+            placeholder="ej. 987654321"
             value={profile.phone}
             onChange={set("phone")}
             maxLength={9}
